@@ -77,6 +77,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.green,
         onPressed: () async {
           dummyData = DummyData();
           await dummyData.saveData(amount: 1000, category: "Shopping 1", date: "22-05-2024");
