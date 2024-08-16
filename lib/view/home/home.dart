@@ -83,9 +83,10 @@ class _HomePageState extends State<HomePage> {
           await dummyData.saveData(amount: 1000, category: "Shopping 1", date: "22-05-2024");
           ExpModel? expModel = await dummyData.getData();
           mainResult = expModel?.result;
+          finalAmount = 0;
           mainResult?.forEach(
                 (element) {
-                  finalAmount = finalAmount + int.parse(element.amount.toString());
+                  finalAmount += int.parse(element.amount.toString());
                 },
           );
           setState(() {});
